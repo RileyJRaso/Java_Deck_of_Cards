@@ -8,6 +8,7 @@ deck.class: ./cards/deck.java
 
 randomdeck.class: ./cards/randomdeck.java
 		 javac -d ./cards ./cards/randomdeck.java
+		 touch main.java
 
 main.class: main.java
 		 javac main.java
