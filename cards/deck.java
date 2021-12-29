@@ -20,6 +20,8 @@ abstract class deck {
   //implemented by Polymorphism
   public abstract Card[] shuffledeck(Card[] deck, int size);
 
+  public abstract Card[] dealhand(Card[] shuffledeck, int handsize);
+
 
 
 }
