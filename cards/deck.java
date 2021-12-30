@@ -20,17 +20,17 @@ abstract class deck {
   //implemented by Polymorphism
   public abstract Card[] shuffledeck(Card[] deck, int size);
 
-  public Card[] dealhand(Card[] deck, int handsize){
-    Card[] newhand = new Card[handsize];
+  public Card[] dealCards(Card[] deck, int amountofCards){
+    Card[] Cards = new Card[amountofCards];
     int decksize = deck.length - 1;
 
-    for(int i = 0; i < handsize; i++){
-      newhand[i] = deck[0];
+    for(int i = 0; i < amountofCards; i++){
+      Cards[i] = deck[0];
       reorderdeck(deck, decksize);
       deck[decksize - i] = null;
     }
 
-    return newhand;
+    return Cards;
   }
 
   private void reorderdeck(Card[] deck, int decksize){

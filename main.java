@@ -28,7 +28,7 @@ public class main {
     System.out.println("suit of card " + (i + 1) +" is: " + deckof52[i].Show_suit() + " rank is: " + deckof52[i].Show_rank());
     }
 
-    firsthand = newdeck.dealhand(deckof52, 2);
+    firsthand = newdeck.dealCards(deckof52, 2);
 
     System.out.println("");
     System.out.println("dealt hand of cards:");
