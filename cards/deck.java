@@ -26,13 +26,17 @@ abstract class deck {
 
     for(int i = 0; i < handsize; i++){
       newhand[i] = deck[0];
-      for(int j = 0; j < decksize; j++){
-        deck[j] = deck[j + 1];
-      }
+      reorderdeck(deck, decksize);
       deck[decksize - i] = null;
     }
 
     return newhand;
+  }
+
+  private void reorderdeck(Card[] deck, int decksize){
+    for(int j = 0; j < decksize; j++){
+      deck[j] = deck[j + 1];
+    }
   }
 
 
