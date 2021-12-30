@@ -58,19 +58,4 @@ public class randomdeck extends deck {
     return deck;
   }
 
-  public Card[] dealhand(Card[] shuffledeck, int handsize){
-    Card[] newhand = new Card[handsize];
-    int decksize = shuffledeck.length - 1;
-
-    for(int i = 0; i < handsize; i++){
-      newhand[i] = shuffledeck[0];
-      for(int j = 0; j < decksize; j++){
-        shuffledeck[j] = shuffledeck[j + 1];
-      }
-      shuffledeck[decksize - i] = null;
-    }
-
-    return newhand;
-  }
-
 }

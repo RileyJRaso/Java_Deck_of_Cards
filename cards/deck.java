@@ -20,7 +20,20 @@ abstract class deck {
   //implemented by Polymorphism
   public abstract Card[] shuffledeck(Card[] deck, int size);
 
-  public abstract Card[] dealhand(Card[] shuffledeck, int handsize);
+  public Card[] dealhand(Card[] deck, int handsize){
+    Card[] newhand = new Card[handsize];
+    int decksize = deck.length - 1;
+
+    for(int i = 0; i < handsize; i++){
+      newhand[i] = deck[0];
+      for(int j = 0; j < decksize; j++){
+        deck[j] = deck[j + 1];
+      }
+      deck[decksize - i] = null;
+    }
+
+    return newhand;
+  }
 
 
 
