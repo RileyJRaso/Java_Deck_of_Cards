@@ -9,13 +9,14 @@ public class main {
     int size = 52;
     Card[] deckof52 = newdeck.createdeck(size);
     Card[] firsthand = new Card[2];
+    Card[] communitycards = new Card[5];
 
     System.out.println("");
     System.out.println("Ordered deck of cards:");
     System.out.println("");
 
     for (int i = 0; i < size; i++) {
-    System.out.println("suit of card " + (i + 1) +" is: " + deckof52[i].Show_suit() + " rank is: " + deckof52[i].Show_rank());
+      System.out.println("suit of card " + (i + 1) +" is: " + deckof52[i].Show_suit() + " rank is: " + deckof52[i].Show_rank());
     }
 
     deckof52 = newdeck.shuffledeck(deckof52, size);
@@ -25,7 +26,7 @@ public class main {
     System.out.println("");
 
     for (int i = 0; i < size; i++) {
-    System.out.println("suit of card " + (i + 1) +" is: " + deckof52[i].Show_suit() + " rank is: " + deckof52[i].Show_rank());
+      System.out.println("suit of card " + (i + 1) +" is: " + deckof52[i].Show_suit() + " rank is: " + deckof52[i].Show_rank());
     }
 
     firsthand = newdeck.dealCards(deckof52, 2);
@@ -35,7 +36,24 @@ public class main {
     System.out.println("");
 
     for (int i = 0; i < 2; i++) {
-    System.out.println("suit of card " + (i + 1) +" is: " + firsthand[i].Show_suit() + " rank is: " + firsthand[i].Show_rank());
+      System.out.println("suit of card " + (i + 1) +" is: " + firsthand[i].Show_suit() + " rank is: " + firsthand[i].Show_rank());
+    }
+
+    Card[] River = newdeck.dealCards(deckof52, 3);
+    for(int i = 0; i < 3; i++) {
+      communitycards[i] = River[i];
+    }
+
+    System.out.println("");
+    System.out.println("dealt River:");
+    System.out.println("");
+
+    for (int i = 0; i < communitycards.length; i++) {
+      if(communitycards[i] == null){
+        ;
+      } else {
+        System.out.println("suit of card " + (i + 1) +" is: " + communitycards[i].Show_suit() + " rank is: " + communitycards[i].Show_rank());
+      }
     }
 
     System.out.println("");
