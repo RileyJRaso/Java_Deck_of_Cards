@@ -2,6 +2,8 @@
 
 classes that can simulate a deck of cards, the whole program is run by the main class which imports all the classes from the cards package. each card is an object of the Card class which holds it's suit and rank. the deck abstraction implements the deck creation method (to make a deck of a given size, works best for a deck of 52, 49, 26, or 13 to get every rank of cards) but leaves the shuffle method to be implemented by other classes that extend the deck class. the first extention of the deck class made is the random deck which has a shuffle method to simulate how a deck is shuffled in a casino that returns a random order of cards everytime it is called. 
 
+added a method in the deck abstraction to "deal" out a hand of cards, implemented in the deck abstraction as all decks would be able to deal cards
+
 # Installation
 
 in order to get the program run: 
@@ -42,5 +44,5 @@ the following are a list of ideas for future features and changes to the program
 
 
 - add more user input such as the deck size before the deck class is called
-- add a mode to get hands of cards rather than the whole deck
+- :white_check_mark: add a mode to get hands of cards rather than the whole deck 
 - add another extention of the deck class that returns an ordered deck everytime
