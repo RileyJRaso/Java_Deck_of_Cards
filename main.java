@@ -11,25 +11,19 @@ public class main {
     Card[] firsthand = new Card[2];
     Card[] communitycards = new Card[5];
 
-    System.out.println("");
-    System.out.println("Ordered deck of cards:");
-    System.out.println("");
+    DisplayHeader("Ordered deck of cards:");
 
     DisplayCards(deckof52);
 
     deckof52 = newdeck.shuffledeck(deckof52, size);
 
-    System.out.println("");
-    System.out.println("Shuffled deck of cards:");
-    System.out.println("");
+    DisplayHeader("Shuffled deck of cards:");
 
     DisplayCards(deckof52);
 
     firsthand = newdeck.dealCards(deckof52, 2);
 
-    System.out.println("");
-    System.out.println("dealt hand of cards:");
-    System.out.println("");
+    DisplayHeader("dealt hand of cards:");
 
     DisplayCards(firsthand);
 
@@ -38,15 +32,11 @@ public class main {
       communitycards[i] = River[i];
     }
 
-    System.out.println("");
-    System.out.println("dealt River:");
-    System.out.println("");
+    DisplayHeader("dealt River:");
 
     DisplayCards(communitycards);
 
-    System.out.println("");
-    System.out.println("remaning deck of cards:");
-    System.out.println("");
+    DisplayHeader("remaning deck of cards:");
 
     DisplayCards(deckof52);
 
@@ -63,4 +53,15 @@ public class main {
     }
 
   }
+
+  private static void DisplayHeader(String text){
+
+    System.out.println("");
+    System.out.println(text);
+    System.out.println("");
+
+
+  }
+
+
 }
