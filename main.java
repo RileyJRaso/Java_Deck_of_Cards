@@ -11,15 +11,15 @@ public class main {
     Card[] firsthand = new Card[2];
     Card[] communitycards = new Card[5];
 
-    DisplayHeader("Ordered deck of cards:");
+    //DisplayHeader("Ordered deck of cards:");
 
-    DisplayCards(deckof52);
+    //DisplayCards(deckof52);
 
     deckof52 = newdeck.shuffledeck(deckof52, size);
 
-    DisplayHeader("Shuffled deck of cards:");
+    //DisplayHeader("Shuffled deck of cards:");
 
-    DisplayCards(deckof52);
+    //DisplayCards(deckof52);
 
     firsthand = newdeck.dealCards(deckof52, 2);
 
@@ -36,9 +36,9 @@ public class main {
 
     DisplayCards(communitycards);
 
-    DisplayHeader("remaning deck of cards:");
+    //DisplayHeader("remaning deck of cards:");
 
-    DisplayCards(deckof52);
+    //DisplayCards(deckof52);
 
   }
 
@@ -60,6 +60,36 @@ public class main {
     System.out.println(text);
     System.out.println("");
 
+
+  }
+
+  private static String Texaspokerhands(Card[] hand, Card[] communitycards){
+    Boolean HighCard = false;
+    String HighCardRank = "";
+    Boolean Pair = false;
+    String PairRank = "";
+    Boolean TwoPair = false;
+    String TwoPairRank1 = "";
+    String TwoPairRank2 = "";
+    Boolean Threeofakind = false;
+    String ThreeofakindRank = "";
+    Boolean Straight = false;
+    String StraightRank = "";
+    Boolean Flush = false;
+    String FlushRank = "";
+    Boolean Fullhouse = false;
+    String FullhouseRank = "";
+    Boolean Fourofakind = false;
+    String FourofakindRank = "";
+    Boolean Straightflush = false;
+    String StraightflushRank = "";
+    Boolean Royalflush = false;
+
+
+    For(int i = 0; i < hand.length; i ++){
+
+      }
+    }
 
   }
 
